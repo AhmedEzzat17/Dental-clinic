@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="img/favicon.ico" rel="icon">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="css/twentytwenty/twentytwenty.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary m-1" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+        <div class="spinner-grow text-dark m-1" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+        <div class="spinner-grow text-secondary m-1" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-light ps-5 pe-0 d-none d-lg-block">
+        <div class="row gx-0">
+            <div class="col-md-6 text-center text-lg-start mb-2 mb-lg-0">
+                <div class="d-inline-flex align-items-center">
+                    <small class="py-2"><i class="far fa-clock text-primary me-2"></i>Opening Hours: sat - thu : 6.00
+                        am - 10.00 pm, Friday Closed </small>
+                </div>
+            </div>
+            <div class="col-md-6 text-center text-lg-end">
+                <div class="position-relative d-inline-flex align-items-center bg-primary text-white top-shape px-5">
+                    <div class="me-3 pe-3 border-end py-2">
+                        <p class="m-0"><i class="fa fa-envelope-open me-2"></i>info@example.com</p>
+                    </div>
+                    <div class="py-2">
+                        <p class="m-0"><i class="fa fa-phone-alt me-2"></i>+012 345 6789</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow-sm px-5 py-3 py-lg-0 sticky-top">
+        <a href="index.html" class="navbar-brand p-0">
+            <h1 class="m-0 text-primary"><i class="fa fa-tooth me-2"></i>DentCare</h1>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto py-0">
+                <a href="./index.html#Home" class="nav-item nav-link">Home</a>
+                <a href="./index.html#service" class="nav-item nav-link">Service</a>
+                <a href="./index.html#about" class="nav-item nav-link">About</a>
+                <!-- <div class="nav-item dropdown">
+                    <a href="#" class="nav-link" data-bs-toggle="dropdown">Specialties <i
+                            class="fa fa-chevron-down ms-1" style="font-size: 0.8em;"></i></a>
+                    <div class="dropdown-menu m-0">
+                        <a href="#appointment" class="dropdown-item">Appointment</a>
+                        <a href="price.html" class="dropdown-item">Pricing Plan</a>
+                        <a href="team.html" class="dropdown-item">Our Dentist</a>
+                        <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                    </div>
+                </div> -->
+                <a href="./index.html#Specialties" class="nav-item nav-link">Specialties</a>
+                <a href="./index.html#blog" class="nav-item nav-link">Blog</a>
+                <a href="./index.html#contact" class="nav-item nav-link">Contact</a>
+            </div>
+            <button type="button" class="btn text-dark no-animate" data-bs-toggle="modal"
+                data-bs-target="#searchModal"><i class="fa fa-search"></i></button>
+            <a href="#appointment" class="btn btn-primary text-white py-2 px-4 ms-3 no-animate">Appointment</a>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+
+    <!-- Full Screen Search Start -->
+    <div class="modal fade" id="searchModal" tabindex="-1">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content search-modal-content">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn bg-white btn-close no-animate" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body d-flex align-items-center justify-content-center">
+                    <div class="input-group" style="max-width: 600px;">
+                        <input type="text" class="form-control bg-transparent border-primary p-3"
+                            placeholder="Search Here">
+                        <button class="btn btn-primary px-4 no-animate"><i class="bi bi-search"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Full Screen Search End -->
+
+
+    <!-- Appointment Start -->
+    <div id="appointment" class="container-fluid bg-primary bg-appointment my-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container">
+            <div class="row gx-5 appointment-form">
+                <div class="col-lg-6 py-5">
+                    <div class="py-5">
+                        <h1 class="display-5 text-white mb-4">We Are A Certified and Award Winning Dental Clinic You Can
+                            Trust</h1>
+                        <p class="text-white mb-0">With years of experience and a commitment to excellence, our team
+                            ensures you receive the best possible care. From routine checkups to complex procedures, we
+                            are here to support your dental health journey every step of the way.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="appointment-form h-100 d-flex flex-column justify-content-center text-center p-5 wow zoomIn"
+                        data-wow-delay="0.6s">
+                        <h1 class="text-white mb-4">Make Appointment</h1>
+                        <form>
+                            <div class="row g-3">
+                                <div class="col-12 col-sm-6">
+                                    <select class="form-select bg-light border-0" style="height: 50px;">
+                                        <option selected>Select A Service</option>
+                                        <option value="1">Dental Implant</option>
+                                        <option value="2">Root Canal</option>
+                                        <option value="3">Teeth Whitening</option>
+                                    </select>
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <select class="form-select bg-light border-0" style="height: 50px;">
+                                        <option selected>Select Doctor</option>
+                                        <option value="1">Dr. Ahmed Mohsen</option>
+                                        <option value="2">Dr. Sarah gamal</option>
+                                        <option value="3">Dr. Khaled shapana</option>
+                                    </select>
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <input type="text" class="form-control bg-light border-0" placeholder="Your Name"
+                                        style="height: 50px;">
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <input type="number" class="form-control bg-light border-0" placeholder="Your Phone"
+                                        style="height: 50px;">
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <div class="date" id="date1" data-target-input="nearest">
+                                        <input type="text" class="form-control bg-light border-0 datetimepicker-input"
+                                            placeholder="Appointment Date" data-target="#date1"
+                                            data-toggle="datetimepicker" style="height: 50px;">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <div class="time" id="time1" data-target-input="nearest">
+                                        <input type="text" class="form-control bg-light border-0 datetimepicker-input"
+                                            placeholder="Appointment Time" data-target="#time1"
+                                            data-toggle="datetimepicker" style="height: 50px;">
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button class="btn btn-dark w-100 py-3" type="submit">Make Appointment</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Appointment End -->
+
+
+    <!-- #FOOTER -->
+    <footer id="contact" class="footer mt-5">
+        <div class="footer-top section">
+            <div class="container">
+                <div class="footer-brand">
+                    <a href="#" class="logo">DentCare</a>
+
+                    <p class="footer-text">
+                        Providing top-quality dental care with a gentle touch. Our experienced team is dedicated to
+                        safeguarding your oral health and giving you the confident smile you deserve.
+                    </p>
+
+                    <div class="schedule">
+                        <div class="schedule-icon">
+                            <ion-icon name="time-outline"></ion-icon>
+                        </div>
+
+                        <span class="span">
+                            Saturday - Thursday:<br>
+                            9:00 AM - 9:00 PM
+                        </span>
+                    </div>
+
+                </div>
+
+                <ul class="footer-list">
+
+                    <li>
+                        <p class="footer-list-title">Other Links</p>
+                    </li>
+
+                    <li>
+                        <a href="#" class="footer-link">
+                            <ion-icon name="add-outline"></ion-icon>
+
+                            <span class="span">Home</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#service" class="footer-link">
+                            <ion-icon name="add-outline"></ion-icon>
+
+                            <span class="span">Services</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#about" class="footer-link">
+                            <ion-icon name="add-outline"></ion-icon>
+
+                            <span class="span">About Us</span>
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="#Specialties" class="footer-link">
+                            <ion-icon name="add-outline"></ion-icon>
+
+                            <span class="span">Specialties</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#blog" class="footer-link">
+                            <ion-icon name="add-outline"></ion-icon>
+
+                            <span class="span">Blog</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#contact" class="footer-link">
+                            <ion-icon name="add-outline"></ion-icon>
+
+                            <span class="span">Contact Us</span>
+                        </a>
+                    </li>
+
+                </ul>
+
+                <ul class="footer-list">
+
+                    <li>
+                        <p class="footer-list-title">Our Services</p>
+                    </li>
+
+                    <li>
+                        <a href="#" class="footer-link">
+                            <ion-icon name="add-outline"></ion-icon>
+
+                            <span class="span">Root Canal</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="footer-link">
+                            <ion-icon name="add-outline"></ion-icon>
+
+                            <span class="span">Alignment Teeth</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="footer-link">
+                            <ion-icon name="add-outline"></ion-icon>
+
+                            <span class="span">Cosmetic Teeth</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="footer-link">
+                            <ion-icon name="add-outline"></ion-icon>
+
+                            <span class="span">Oral Hygiene</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="footer-link">
+                            <ion-icon name="add-outline"></ion-icon>
+
+                            <span class="span">Live Advisory</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="footer-link">
+                            <ion-icon name="add-outline"></ion-icon>
+
+                            <span class="span">Cavity Inspection</span>
+                        </a>
+                    </li>
+
+                </ul>
+
+                <ul class="footer-list">
+
+                    <li>
+                        <p class="footer-list-title">Contact Us</p>
+                    </li>
+
+                    <li class="footer-item">
+                        <div class="item-icon">
+                            <ion-icon name="location-outline"></ion-icon>
+                        </div>
+
+                        <address class="item-text">
+                            123 Dental Street,<br>
+                            City Center, New York
+                        </address>
+                    </li>
+
+                    <li class="footer-item">
+                        <div class="item-icon">
+                            <ion-icon name="call-outline"></ion-icon>
+                        </div>
+
+                        <a href="tel:+0123456789" class="footer-link">+012 345 6789</a>
+                    </li>
+
+                    <li class="footer-item">
+                        <div class="item-icon">
+                            <ion-icon name="mail-outline"></ion-icon>
+                        </div>
+
+                        <a href="mailto:info@example.com" class="footer-link">info@example.com</a>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+
+                <p class="copyright">
+                    &copy; 2026 All Rights Reserved by Ahmed Ezzat.
+                </p>
+
+                <ul class="social-list">
+
+                    <li>
+                        <a href="#" class="social-link">
+                            <ion-icon name="logo-facebook"></ion-icon>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="social-link">
+                            <ion-icon name="logo-instagram"></ion-icon>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="social-link">
+                            <ion-icon name="logo-twitter"></ion-icon>
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+
+    </footer>
+    <!-- #FOOTER -->
+
+
+
+
+    <script src="css/wow/wow.min.js"></script>
+    <script src="css/twentytwenty/jquery.event.move.js"></script>
+    <script src="css/twentytwenty/jquery.twentytwenty.js"></script>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

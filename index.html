@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dental Clinic</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="img/favicon.ico" rel="icon">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="css/twentytwenty/twentytwenty.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary m-1" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+        <div class="spinner-grow text-dark m-1" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+        <div class="spinner-grow text-secondary m-1" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-light ps-5 pe-0 d-none d-lg-block">
+        <div class="row gx-0">
+            <div class="col-md-6 text-center text-lg-start mb-2 mb-lg-0">
+                <div class="d-inline-flex align-items-center">
+                    <small class="py-2"><i class="far fa-clock text-primary me-2"></i>Opening Hours: sat - thu : 6.00
+                        am - 10.00 pm, Friday Closed </small>
+                </div>
+            </div>
+            <div class="col-md-6 text-center text-lg-end">
+                <div class="position-relative d-inline-flex align-items-center bg-primary text-white top-shape px-5">
+                    <div class="me-3 pe-3 border-end py-2">
+                        <p class="m-0"><i class="fa fa-envelope-open me-2"></i>info@example.com</p>
+                    </div>
+                    <div class="py-2">
+                        <p class="m-0"><i class="fa fa-phone-alt me-2"></i>+012 345 6789</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow-sm px-5 py-3 py-lg-0 sticky-top">
+        <a href="index.html" class="navbar-brand p-0">
+            <h1 class="m-0 text-primary"><i class="fa fa-tooth me-2"></i>DentCare</h1>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto py-0">
+                <a href="#home" class="nav-item nav-link active">Home</a>
+                <a href="#service" class="nav-item nav-link">Service</a>
+                <a href="#about" class="nav-item nav-link">About</a>
+                <!-- <div class="nav-item dropdown">
+                    <a href="#" class="nav-link" data-bs-toggle="dropdown">Specialties <i
+                            class="fa fa-chevron-down ms-1" style="font-size: 0.8em;"></i></a>
+                    <div class="dropdown-menu m-0">
+                        <a href="#appointment" class="dropdown-item">Appointment</a>
+                        <a href="price.html" class="dropdown-item">Pricing Plan</a>
+                        <a href="team.html" class="dropdown-item">Our Dentist</a>
+                        <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                    </div>
+                </div> -->
+                <a href="#specialties" class="nav-item nav-link">Specialties</a>
+                <a href="#blog" class="nav-item nav-link">Blog</a>
+                <a href="./ContactUs.html" class="nav-item nav-link">Contact</a>
+            </div>
+            <button type="button" class="btn text-dark no-animate" data-bs-toggle="modal"
+                data-bs-target="#searchModal"><i class="fa fa-search"></i></button>
+            <a href="./Appointment.html" class="btn btn-primary text-white py-2 px-4 ms-3 no-animate">Appointment</a>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+
+    <!-- Full Screen Search Start -->
+    <div class="modal fade" id="searchModal" tabindex="-1">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content search-modal-content">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn bg-white btn-close no-animate" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body d-flex align-items-center justify-content-center">
+                    <div class="input-group" style="max-width: 600px;">
+                        <input type="text" class="form-control bg-transparent border-primary p-3"
+                            placeholder="Search Here">
+                        <button class="btn btn-primary px-4 no-animate"><i class="bi bi-search"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Full Screen Search End -->
+
+
+    <!-- Carousel Start -->
+    <div class="container-fluid p-0" id="home">
+        <div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="4000"
+            data-bs-pause="false" data-bs-wrap="true" data-bs-touch="false" data-bs-keyboard="false">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="w-100" src="img/carousel-1.jpg" alt="Image">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="p-3" style="max-width: 1000px;">
+                            <h4 class="text-white text-uppercase mb-3 animated slideInDown">Your Smile Is Our Priority
+                            </h4>
+                            <h1 class="display-1 text-white mb-md-4 animated zoomIn">Experience World-Class Dental Care
+                                & Comfort</h1>
+                            <a href="appointment.html"
+                                class="btn btn-primary py-md-3 px-md-5 me-3 text-white animated slideInLeft">Appointment</a>
+                            <a href="./ContactUs.html"
+                                class="btn btn-secondary py-md-3 px-md-5 text-dark animated slideInRight ContactUS">Contact
+                                Us</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="w-100" src="img/carousel-2.jpg" alt="Image">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="p-3" style="max-width: 1000px;">
+                            <h4 class="text-white text-uppercase mb-3 animated slideInDown">Advanced Dental Care</h4>
+                            <h1 class="display-1 text-white mb-md-4 animated zoomIn">Gentle Treatment For Your Healthy
+                                Smile</h1>
+                            <a href="appointment.html"
+                                class="btn btn-primary py-md-3 px-md-5 me-3 text-white animated slideInLeft">Appointment</a>
+                            <a href=""
+                                class="btn btn-secondary py-md-3 px-md-5 text-dark animated slideInRight ContactUS">Contact
+                                Us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#header-carousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    <!-- Carousel End -->
+
+
+    <!--#SERVICE one -->
+    <section class="section-service" id="service" aria-label="service">
+        <div class="container py-5 my-5">
+
+            <p class="section-subtitle text-center">Our Services</p>
+
+            <h2 class="h2 section-title text-center">What We Provide</h2>
+
+            <ul class="service-list">
+
+                <li>
+                    <div class="service-card">
+
+                        <div class="card-icon">
+                            <img src="./img/images/service-icon-1.png" loading="lazy" alt="service icon" class="w-100">
+                        </div>
+
+                        <div>
+                            <h3 class="h3 card-title">Root Canal</h3>
+
+                            <p class="card-text">
+                                Effective treatment to save infected teeth and relieve pain instantly.
+                            </p>
+                        </div>
+
+                    </div>
+                </li>
+
+                <li>
+                    <div class="service-card">
+
+                        <div class="card-icon">
+                            <img src="./img/images/service-icon-2.png" loading="lazy" alt="service icon" class="w-100">
+                        </div>
+
+                        <div>
+                            <h3 class="h3 card-title">Alignment Teeth</h3>
+
+                            <p class="card-text">
+                                Professional orthodontic solutions to straighten your teeth and smile.
+                            </p>
+                        </div>
+
+                    </div>
+                </li>
+
+                <li>
+                    <div class="service-card">
+
+                        <div class="card-icon">
+                            <img src="./img/images/service-icon-3.png" loading="lazy" alt="service icon" class="w-100">
+                        </div>
+
+                        <div>
+                            <h3 class="h3 card-title">Cosmetic Teeth</h3>
+
+                            <p class="card-text">
+                                Enhance your smile with veneers, whitening, and aesthetic procedures.
+                            </p>
+                        </div>
+
+                    </div>
+                </li>
+
+                <li class="service-banner">
+                    <figure>
+                        <img src="./img/images/service-banner.png" loading="lazy" alt="service banner" class="w-100">
+                    </figure>
+                </li>
+
+                <li>
+                    <div class="service-card">
+
+                        <div class="card-icon">
+                            <img src="./img/images/service-icon-4.png" loading="lazy" alt="service icon" class="w-100">
+                        </div>
+
+                        <div>
+                            <h3 class="h3 card-title">Oral Hygiene</h3>
+
+                            <p class="card-text">
+                                Comprehensive cleaning and care to maintain healthy gums and teeth.
+                            </p>
+                        </div>
+
+                    </div>
+                </li>
+
+                <li>
+                    <div class="service-card">
+
+                        <div class="card-icon">
+                            <img src="./img/images/service-icon-5.png" loading="lazy" alt="service icon" class="w-100">
+                        </div>
+
+                        <div>
+                            <h3 class="h3 card-title">Live Advisory</h3>
+
+                            <p class="card-text">
+                                Expert dental consultation and advice for your oral health concerns.
+                            </p>
+                        </div>
+
+                    </div>
+                </li>
+
+                <li>
+                    <div class="service-card">
+
+                        <div class="card-icon">
+                            <img src="./img/images/service-icon-6.png" loading="lazy" alt="service icon" class="w-100">
+                        </div>
+
+                        <div>
+                            <h3 class="h3 card-title">Cavity Inspection</h3>
+
+                            <p class="card-text">
+                                Early detection and treatment of tooth decay to prevent future damage.
+                            </p>
+                        </div>
+
+                    </div>
+                </li>
+
+            </ul>
+
+        </div>
+    </section>
+    <!--#SERVICE one -->
+
+
+    <!-- #ABOUT -->
+    <section class="section about" id="about" aria-label="about">
+        <div class="container">
+
+            <figure class="about-banner">
+                <img src="./img/images/about-banner.png" width="470" height="538" loading="lazy" alt="about banner"
+                    class="w-100">
+            </figure>
+
+            <div class="about-content">
+
+                <p class="section-subtitle">About Us</p>
+
+                <h2 class="h2 section-title">We Care For Your Dental Health</h2>
+
+                <p class="section-text section-text-1">
+                    We provide comprehensive dental care using state-of-the-art technology in a warm and welcoming
+                    environment.
+                    Our priority is your comfort and well-being, ensuring that every visit is a positive experience for
+                    you and your family.
+                </p>
+
+                <p class="section-text">
+                    Our team of highly skilled dentists is dedicated to delivering personalized solutions for your oral
+                    health.
+                    From routine cleanings to advanced cosmetic procedures, we work with you to achieve the healthy,
+                    confident smile you deserve.
+                </p>
+
+                <!-- <a href="#" class="btn">Read more</a> -->
+
+            </div>
+
+        </div>
+    </section>
+    <!-- #ABOUT -->
+
+
+    <!-- Offer Start -->
+    <div class="container-fluid bg-offer my-5 py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-7 wow zoomIn" data-wow-delay="0.6s">
+                    <div class="offer-text text-center rounded p-5">
+                        <h1 class="display-5 text-white">Save 30% On Your First Dental Checkup</h1>
+                        <p class="text-white mb-4">We believe everyone deserves a healthy smile. Schedule your initial
+                            consultation now and enjoy a special discount on professional cleaning and diagnostic
+                            services.</p>
+                        <a href="appointment.html" class="btn btn-dark py-3 px-5 ">Appointment</a>
+                        <!-- <a href="" class="btn btn-light py-3 px-5">Read More</a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Offer End -->
+
+
+    <!-- Appointment Start -->
+    <div id="appointment" class="container-fluid bg-primary bg-appointment my-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container">
+            <div class="row gx-5 appointment-form">
+                <div class="col-lg-6 py-5">
+                    <div class="py-5">
+                        <h1 class="display-5 text-white mb-4">We Are A Certified and Award Winning Dental Clinic You Can
+                            Trust</h1>
+                        <p class="text-white mb-0">With years of experience and a commitment to excellence, our team
+                            ensures you receive the best possible care. From routine checkups to complex procedures, we
+                            are here to support your dental health journey every step of the way.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="appointment-form h-100 d-flex flex-column justify-content-center text-center p-5 wow zoomIn"
+                        data-wow-delay="0.6s">
+                        <h1 class="text-white mb-4">Make Appointment</h1>
+                        <form>
+                            <div class="row g-3">
+                                <div class="col-12 col-sm-6">
+                                    <select class="form-select bg-light border-0" style="height: 50px;">
+                                        <option selected>Select A Service</option>
+                                        <option value="1">Dental Implant</option>
+                                        <option value="2">Root Canal</option>
+                                        <option value="3">Teeth Whitening</option>
+                                    </select>
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <select class="form-select bg-light border-0" style="height: 50px;">
+                                        <option selected>Select Doctor</option>
+                                        <option value="1">Dr. Ahmed Mohsen</option>
+                                        <option value="2">Dr. Sarah gamal</option>
+                                        <option value="3">Dr. Khaled shapana</option>
+                                    </select>
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <input type="text" class="form-control bg-light border-0" placeholder="Your Name"
+                                        style="height: 50px;">
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <input type="number" class="form-control bg-light border-0" placeholder="Your Phone"
+                                        style="height: 50px;">
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <div class="date" id="date1" data-target-input="nearest">
+                                        <input type="text" class="form-control bg-light border-0 datetimepicker-input"
+                                            placeholder="Appointment Date" data-target="#date1"
+                                            data-toggle="datetimepicker" style="height: 50px;">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <div class="time" id="time1" data-target-input="nearest">
+                                        <input type="text" class="form-control bg-light border-0 datetimepicker-input"
+                                            placeholder="Appointment Time" data-target="#time1"
+                                            data-toggle="datetimepicker" style="height: 50px;">
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button class="btn btn-dark w-100 py-3" type="submit">Make Appointment</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Appointment End -->
+
+
+    <!-- Specialties Start two -->
+    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s" id="specialties">
+        <div class="container">
+            <div class="row g-5 mb-5">
+                <!-- <div class="col-lg-5 wow zoomIn" data-wow-delay="0.3s" style="min-height: 400px;">
+                    <div class="twentytwenty-container position-relative h-100 rounded overflow-hidden">
+                        <img class="position-absolute w-100 h-100" src="img/before.jpg" style="object-fit: cover;">
+                        <img class="position-absolute w-100 h-100" src="img/after.jpg" style="object-fit: cover;">
+                    </div>
+                </div> -->
+                <div class="col-lg-12">
+                    <div class="section-title mb-5 text-center">
+                        <h5 class="section-subtitle position-relative d-inline-block text-primary text-uppercase">Our
+                            Specialties</h5>
+                        <h1 class="display-5 mb-0">We Offer The Best Quality Dental Services</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-5">
+                <div class="col-lg-4 col-md-6 service-item wow zoomIn" data-wow-delay="0.3s">
+                    <div class="rounded-top overflow-hidden">
+                        <img class="img-fluid" src="img/service-1.jpg" alt="">
+                    </div>
+                    <div class="position-relative bg-light rounded-bottom text-center p-4">
+                        <h5 class="m-0">Cosmetic Dentistry</h5>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 service-item wow zoomIn" data-wow-delay="0.6s">
+                    <div class="rounded-top overflow-hidden">
+                        <img class="img-fluid" src="img/service-2.jpg" alt="">
+                    </div>
+                    <div class="position-relative bg-light rounded-bottom text-center p-4">
+                        <h5 class="m-0">Dental Implants</h5>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 service-item wow zoomIn" data-wow-delay="0.9s">
+                    <div class="rounded-top overflow-hidden">
+                        <img class="img-fluid" src="img/service-3.jpg" alt="">
+                    </div>
+                    <div class="position-relative bg-light rounded-bottom text-center p-4">
+                        <h5 class="m-0">Dental Bridges</h5>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 service-item wow zoomIn" data-wow-delay="0.3s">
+                    <div class="rounded-top overflow-hidden">
+                        <img class="img-fluid" src="img/service-4.jpg" alt="">
+                    </div>
+                    <div class="position-relative bg-light rounded-bottom text-center p-4">
+                        <h5 class="m-0">Teeth Whitening</h5>
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-6 service-item wow zoomIn" data-wow-delay="0.6s">
+                    <div
+                        class="position-relative bg-primary rounded h-100 d-flex flex-column align-items-center justify-content-center text-center p-4">
+                        <h3 class="text-white mb-3">Make Appointment</h3>
+                        <p class="text-white mb-3">Need immediate dental care? Call us now or book your appointment
+                            online for a brighter, healthier smile.</p>
+                        <h2 class="text-white mb-0">+012 345 6789</h2>
+                        <a href="./appointment.html" class="btn btn-dark py-3 px-5 mt-3">Appointment</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Specialties End two -->
+
+
+    <!-- #BLOG -->
+    <section class="section blog section-blog my-5" id="blog" aria-label="blog">
+        <div class="container">
+
+            <p class="section-subtitle text-center">Our Blog</p>
+            <h2 class="h2 section-title text-center">Latest Blog & News</h2>
+            <!-- Swiper -->
+            <div class="swiper blog-slider">
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide">
+                        <div class="blog-card">
+
+                            <figure class="card-banner img-holder" style="--width: 1180; --height: 800;">
+                                <img src="./img/images/blog-1.jpg" width="1180" height="800" loading="lazy"
+                                    alt="Cras accumsan nulla nec lacus ultricies placerat."
+                                    onclick="location.href='/blogs Details.html'" class="img-cover">
+
+                                <div class="card-badge">
+                                    <ion-icon name="calendar-outline"></ion-icon>
+
+                                    <time class="time" datetime="2022-03-24">24th March 2022</time>
+                                </div>
+                            </figure>
+
+                            <div class="card-content">
+
+                                <h3 class="h3">
+                                    <a href="/blogs Details.html" class="card-title">The Importance of Regular Dental
+                                        Checkups</a>
+                                </h3>
+
+                                <p class="card-text">
+                                    Regular visits allow for early diagnosis of dental problems and help maintain your
+                                    overall oral health for years to come.
+                                </p>
+
+                                <a href="/blogs Details.html" class="card-link">Read More</a>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="blog-card">
+
+                            <figure class="card-banner img-holder" style="--width: 1180; --height: 800;">
+                                <img src="./img/images/blog-2.jpg" width="1180" height="800" loading="lazy"
+                                    onclick="location.href='/blogs Details.html'" alt="Dras accumsan nulla nec lacus ultricies placerat." class="img-cover">
+
+                                <div class="card-badge">
+                                    <ion-icon name="calendar-outline"></ion-icon>
+
+                                    <time class="time" datetime="2022-03-24">24th March 2022</time>
+                                </div>
+                            </figure>
+
+                            <div class="card-content">
+
+                                <h3 class="h3">
+                                    <a href="./blogs Details.html" class="card-title">Dental Implants: A Permanent Solution</a>
+                                </h3>
+
+                                <p class="card-text">
+                                    Discover how dental implants can restore your smile, improve chewing ability, and
+                                    prevent bone loss with a natural look.
+                                </p>
+
+                                <a href="./blogs Details.html" class="card-link">Read More</a>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="blog-card">
+
+                            <figure class="card-banner img-holder" style="--width: 1180; --height: 800;">
+                                <img src="./img/images/blog-3.jpg" width="1180" height="800" loading="lazy"
+                                    onclick="location.href='/blogs Details.html'" alt="Top Tips for a Bright and Healthy Smile" class="img-cover">
+
+                                <div class="card-badge">
+                                    <ion-icon name="calendar-outline"></ion-icon>
+
+                                    <time class="time" datetime="2022-05-02">2nd May 2024</time>
+                                </div>
+                            </figure>
+
+                            <div class="card-content">
+
+                                <h3 class="h3">
+                                    <a href="./blogs Details.html" class="card-title">Top Tips for a Bright and Healthy Smile</a>
+                                </h3>
+
+                                <p class="card-text">
+                                    Learn the best daily practices for oral hygiene, from proper brushing techniques to
+                                    the importance of flossing and diet.
+                                </p>
+
+                                <a href="./blogs Details.html" class="card-link">Read More</a>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="blog-card">
+
+                            <figure class="card-banner img-holder" style="--width: 1180; --height: 800;">
+                                <img src="./img/images/blog-3.jpg" width="1180" height="800" loading="lazy"
+                                    onclick="location.href='/blogs Details.html'" alt="Understanding the Root Canal Procedure" class="img-cover">
+
+                                <div class="card-badge">
+                                    <ion-icon name="calendar-outline"></ion-icon>
+
+                                    <time class="time" datetime="2022-06-10">10th June 2024</time>
+                                </div>
+                            </figure>
+
+                            <div class="card-content">
+
+                                <h3 class="h3">
+                                    <a href="./blogs Details.html" class="card-title">Understanding the Root Canal Procedure</a>
+                                </h3>
+
+                                <p class="card-text">
+                                    Don’t let myths scare you, root canal therapy safely saves teeth and relieves pain.
+                                </p>
+
+                                <a href="./blogs Details.html" class="card-link">Read More</a>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="blog-card">
+
+                            <figure class="card-banner img-holder" style="--width: 1180; --height: 800;">
+                                <img src="./img/images/blog-3.jpg" width="1180" height="800" loading="lazy"
+                                    onclick="location.href='/blogs Details.html'" alt="Child Dental Care: When to Start?" class="img-cover">
+
+                                <div class="card-badge">
+                                    <ion-icon name="calendar-outline"></ion-icon>
+
+                                    <time class="time" datetime="2022-07-21">21st July 2024</time>
+                                </div>
+                            </figure>
+
+                            <div class="card-content">
+
+                                <h3 class="h3">
+                                    <a href="./blogs Details.html" class="card-title">Child Dental Care: When to Start?</a>
+                                </h3>
+
+                                <p class="card-text">
+                                    Good oral habits start early, here’s what to know about your child’s first dental
+                                    visit. </p>
+
+                                <a href="./blogs Details.html" class="card-link">Read More</a>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <!-- <div class="swiper-pagination"></div> -->
+            </div>
+
+        </div>
+    </section>
+    <!-- #BLOG -->
+
+
+    <!-- #FOOTER -->
+    <footer id="contact" class="footer mt-5">
+
+        <div class="footer-top section">
+            <div class="container">
+
+                <div class="footer-brand">
+
+                    <a href="#" class="logo">DentCare</a>
+
+                    <p class="footer-text">
+                        Providing top-quality dental care with a gentle touch. Our experienced team is dedicated to
+                        safeguarding your oral health and giving you the confident smile you deserve.
+                    </p>
+
+                    <div class="schedule">
+                        <div class="schedule-icon">
+                            <ion-icon name="time-outline"></ion-icon>
+                        </div>
+
+                        <span class="span">
+                            Saturday - Thursday:<br>
+                            9:00 AM - 9:00 PM
+                        </span>
+                    </div>
+
+                </div>
+
+                <ul class="footer-list">
+
+                    <li>
+                        <p class="footer-list-title">Other Links</p>
+                    </li>
+
+                    <li>
+                        <a href="#" class="footer-link">
+                            <ion-icon name="add-outline"></ion-icon>
+
+                            <span class="span">Home</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#service" class="footer-link">
+                            <ion-icon name="add-outline"></ion-icon>
+
+                            <span class="span">Services</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#about" class="footer-link">
+                            <ion-icon name="add-outline"></ion-icon>
+
+                            <span class="span">About Us</span>
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="#Specialties" class="footer-link">
+                            <ion-icon name="add-outline"></ion-icon>
+
+                            <span class="span">Specialties</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#blog" class="footer-link">
+                            <ion-icon name="add-outline"></ion-icon>
+
+                            <span class="span">Blog</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#contact" class="footer-link">
+                            <ion-icon name="add-outline"></ion-icon>
+
+                            <span class="span">Contact Us</span>
+                        </a>
+                    </li>
+
+                </ul>
+
+                <ul class="footer-list">
+
+                    <li>
+                        <p class="footer-list-title">Our Services</p>
+                    </li>
+
+                    <li>
+                        <a href="#" class="footer-link">
+                            <ion-icon name="add-outline"></ion-icon>
+
+                            <span class="span">Root Canal</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="footer-link">
+                            <ion-icon name="add-outline"></ion-icon>
+
+                            <span class="span">Alignment Teeth</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="footer-link">
+                            <ion-icon name="add-outline"></ion-icon>
+
+                            <span class="span">Cosmetic Teeth</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="footer-link">
+                            <ion-icon name="add-outline"></ion-icon>
+
+                            <span class="span">Oral Hygiene</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="footer-link">
+                            <ion-icon name="add-outline"></ion-icon>
+
+                            <span class="span">Live Advisory</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="footer-link">
+                            <ion-icon name="add-outline"></ion-icon>
+
+                            <span class="span">Cavity Inspection</span>
+                        </a>
+                    </li>
+
+                </ul>
+
+                <ul class="footer-list">
+
+                    <li>
+                        <p class="footer-list-title">Contact Us</p>
+                    </li>
+
+                    <li class="footer-item">
+                        <div class="item-icon">
+                            <ion-icon name="location-outline"></ion-icon>
+                        </div>
+
+                        <address class="item-text">
+                            123 Dental Street,<br>
+                            City Center, New York
+                        </address>
+                    </li>
+
+                    <li class="footer-item">
+                        <div class="item-icon">
+                            <ion-icon name="call-outline"></ion-icon>
+                        </div>
+
+                        <a href="tel:+0123456789" class="footer-link">+012 345 6789</a>
+                    </li>
+
+                    <li class="footer-item">
+                        <div class="item-icon">
+                            <ion-icon name="mail-outline"></ion-icon>
+                        </div>
+
+                        <a href="mailto:info@example.com" class="footer-link">info@example.com</a>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+
+                <p class="copyright">
+                    &copy; 2026 All Rights Reserved by Ahmed Ezzat.
+                </p>
+
+                <ul class="social-list">
+
+                    <li>
+                        <a href="#" class="social-link">
+                            <ion-icon name="logo-facebook"></ion-icon>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="social-link">
+                            <ion-icon name="logo-instagram"></ion-icon>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="social-link">
+                            <ion-icon name="logo-twitter"></ion-icon>
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+
+    </footer>
+    <!-- #FOOTER -->
+
+
+
+    <script src="css/wow/wow.min.js"></script>
+    <script src="css/twentytwenty/jquery.event.move.js"></script>
+    <script src="css/twentytwenty/jquery.twentytwenty.js"></script>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
