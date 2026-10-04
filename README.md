@@ -8,15 +8,15 @@ This project is a front-end dental clinic website that presents the clinic's ser
 
 ## Features
 
-- 🏠 Responsive Home Page
-- 🦷 Dental Services Section
-- 👨‍⚕️ Doctors & Clinic Information
-- 📅 Appointment Page
-- 📝 Blog & Blog Details
-- 📞 Contact Us Page
-- 📱 Responsive Design
-- 🎨 Modern and User-Friendly UI
-- ⚡ Interactive Front-End Elements
+-  Responsive Home Page
+-  Dental Services Section
+-  Doctors & Clinic Information
+-  Appointment Page
+-  Blog & Blog Details
+-  Contact Us Page
+-  Responsive Design
+-  Modern and User-Friendly UI
+-  Interactive Front-End Elements
 
 ## Technologies
 
